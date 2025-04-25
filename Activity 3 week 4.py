@@ -49,7 +49,7 @@ class Person:
     bank_account = property(get_account)
 
     def __eq__(self, other):
-        return isinstance(other, Person) and self.__first_name == other.__first_name and self.__last_name == other.__last_name
+        return isinstance(other, Person) and self.__first_name[0] == other.__first_name[0] and self.__last_name == other.__last_name
 
     def __str__(self):
         if self.__account:
